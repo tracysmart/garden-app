@@ -1,1 +1,27 @@
-<p>plants works!</p>
+<!-- {{plant}} -->
+
+<div class="container ">
+  <div class="row">
+    <div *ngFor="let plant of plants" class="card" style="width: 18rem;">
+      
+        <img src="../../assets/image.jpg" class="card-img-top" alt="plant detail">
+        <div class="card-body">
+          <h5 class="card-title">{{plant.product_name}}</h5>
+          <p class="card-text">{{plant.product_description}}</p>
+          <div *ngIf="token">
+          <button (click)="killPlant()" class="btn btn-primary">Kill Plant</button>
+          <div *ngFor="let plant of plants | async">
+            {{plant | json }}
+          </div>
+        </div>
+        </div>
+        <div class="card-footer text-muted">
+          $ {{plant.product_price}}
+        </div>
+      
+    </div>
+  </div>
+</div>
+<!-- <div>
+  <img src="../../assets/Soil.jpg">
+</div> -->

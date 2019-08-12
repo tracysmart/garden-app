@@ -1,0 +1,28 @@
+
+.card {
+  margin: 20px;
+}
+
+/* .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+} */
+
+.card-title {
+  color: #ff7700;
+  font-family: Oswald;
+  font-size: 1.8em;
+}
+
+.card-footer {
+  background-color: #f1c9a5;
+}
+
+.text-muted {
+  color: rgb(8, 70, 3) !important;
+  font-family: Oswald;
+  font-size: 1.3em;
+  opacity: 1;
+}
