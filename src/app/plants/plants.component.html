@@ -1,1 +1,7 @@
 <p>plants works!</p>
+<button (click)="getPlants()">Click Me</button>
+    <div *ngFor="let plant of plants; let i=index">
+      {{ plant.product_name}}
+      {{plantPhotos[(i)]}}
+    <br>
+    </div>

@@ -15,17 +15,28 @@ export class LoginComponent implements OnInit {
     password: ""
   };
 
+  token: string;
+
   constructor(private userService: UserService) { }
   // constructor(private http: HttpClient) { }
 
   plants: any;
 
-  ngOnInit() { }
+  ngOnInit() { 
+    if (sessionStorage.getItem("token")) {
+      this.token=sessionStorage.getItem('token');
+    }
+
+  }
   logIn() {
     console.log(this.user);
     this.userService.userLogin(this.user)
     .subscribe((data:any) => {
-        if (data.error =='false'){
+        if (data.error ===false){
+          sessionStorage.setItem("token", data.token);
+          this.token=data.token
+          console.log(this.token)
+
           console.log('great'+ data)
         } else {
         console.log(data)
