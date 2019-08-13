@@ -38,11 +38,8 @@ export class PlantsComponent implements OnInit {
     })
   }
   killPlant(id) {
-   this.plantsService.killPlantService(id).subscribe((data:any)) => {
-     this.loadPlants();
-   }, err => console.log(err);
-    console.log(id);
-  }
-  }
-
-  
+   this.plantsService.killPlantService(id).subscribe((data:any)=>{
+    //  this.loadPlants()
+     console.log(data)
+   }, err => console.log(err))
+  }}
