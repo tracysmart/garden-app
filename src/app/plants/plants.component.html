@@ -1,15 +1,16 @@
 <!-- {{plant}} -->
+<app-header-nav></app-header-nav>
 <div class="dirt">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div *ngFor="let plant of plants; index as i" class="card" style="width: 18rem;">
+      <div *ngFor="let plant of plants; index as i" class="card" style="width: 22rem;">
 
         <img src="{{plantPics[(i)]}}" class="card-img-top" alt="plant detail">
         <div class="card-body">
           <h5 class="card-title">{{plant.product_name}}</h5>
           <p class="card-text">{{plant.product_description}}</p>
           <!-- <div *ngIf="token"> -->
-            <button (click)="killPlant()" class="btn btn-primary">Kill Plant</button>
+            <button (click)="killPlant(plant.id)" class="btn btn-primary">Kill Plant</button>
           
           <!-- </div> -->
         </div>

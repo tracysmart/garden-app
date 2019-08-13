@@ -7,6 +7,7 @@ import { PlantsComponent } from './plants/plants.component';
 import { LoginComponent } from './login/login.component';
 import { AboutClientComponent } from './about-client/about-client.component';
 import { AboutCarbonComponent } from './about-carbon/about-carbon.component';
+import { HeaderNavComponent } from './header-nav/header-nav.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutCarbonComponent } from './about-carbon/about-carbon.component';
     PlantsComponent,
     LoginComponent,
     AboutClientComponent,
-    AboutCarbonComponent
+    AboutCarbonComponent,
+    HeaderNavComponent
   ],
   imports: [
     BrowserModule,

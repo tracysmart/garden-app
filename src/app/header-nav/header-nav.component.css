@@ -1,0 +1,89 @@
+.sub {
+  text-align: center;
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family:'Oswald', sans-serif;
+  margin: 0 10%;
+  color: rgb(8, 70, 3);
+}
+
+@media screen and (min-width: 768px) {
+  h1.sub {
+    font-size: 3.5em;
+    line-height: 1em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1.sub {
+    font-size: 2em;
+    line-height: .9em;
+  }
+}
+
+.logo-box {
+  background-color: rgb(180, 250, 40);
+  margin: 0;
+  /* height: 200px; */
+}
+
+.d-table{
+  background-color: rgb(153, 208, 43);
+  width:76vw;
+
+}
+
+.pageCtr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.dirt {
+  background:url(https://files.slack.com/files-pri/TH7BB59MM-FLXHTDXMY/soil.jpg) repeat;
+
+}
+
+#orange {
+  color: #ff7700;
+}
+
+.links {
+  font-family: sans-serif;
+  font-weight: light;
+  font-size: 1.2em;
+  color:rgb(8, 70, 3);
+
+}
+
+.container-fluid {
+  display: flex;
+  background-color: white;  
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.bar {
+  background-color: #ff7700;
+  width: 100vw;
+  margin:10;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.ts {
+  padding:5px 25px;
+  text-align: center;
+}
+
+.pf-logo {
+  margin: 0px -10px;
+}

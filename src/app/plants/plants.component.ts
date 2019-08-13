@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // import { PLANTS } from '../mock-plants';
 import { PlantsService } from '../plants.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-plants',
@@ -12,7 +14,7 @@ export class PlantsComponent implements OnInit {
   plantPics = [];
   token: string;
 
-  constructor(private plantsService:PlantsService) {
+  constructor(private plantsService:PlantsService, private http: HttpClient) {
   
    }
 
@@ -35,5 +37,12 @@ export class PlantsComponent implements OnInit {
      
     })
   }
+  killPlant(id) {
+   this.plantsService.killPlantService(id).subscribe((data:any)) => {
+     this.loadPlants();
+   }, err => console.log(err);
+    console.log(id);
+  }
   }
 
+  
