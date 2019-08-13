@@ -1,1 +1,37 @@
 <p>login works!</p>
+
+<div class="container">
+  <h2>{{ user.userName }}</h2>
+
+  <form (ngSubmit)="logIn(event)">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Enter email"
+        name="emails"
+        [(ngModel)]="user.userName"
+      />
+    </div>
+
+    <div class="form-group">
+      <input
+        type="passsword"
+        class="form-control"
+        placeholder="Enter Password"
+        name="password"
+        [(ngModel)]="user.password"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <div *ngIf="token">
+    <button (click)="getPlants()">Click Me</button>
+    <div *ngFor="let plant of plants | async">
+      {{ plant | json }}
+    </div>
+  </div>
+</div>
