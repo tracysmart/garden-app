@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PLANTS } from '../mock-plants';
+// import { PLANTS } from '../mock-plants';
+import { PlantsService } from '../plants.service';
 
 @Component({
   selector: 'app-plants',
@@ -7,17 +8,32 @@ import { PLANTS } from '../mock-plants';
   styleUrls: ['./plants.component.css']
 })
 export class PlantsComponent implements OnInit {
-  plants = PLANTS;
-
+  plants:any = [];
+  plantPics = [];
   token: string;
 
-  constructor() { }
+  constructor(private plantsService:PlantsService) {
+  
+   }
 
   ngOnInit() {
     if (sessionStorage.getItem("token")) {
       this.token = sessionStorage.getItem('token');
     }
+    this.loadPlants()
 
+   }
+   loadPlants() {
+    this.plantsService.getPlantProduct()
+    .subscribe((data) => {
+      console.log(data)
+      this.plants = data
+      for(let i=0; i < this.plants.length; i++){
+        let randomPic = Math.floor(Math.random() * 13) +1;
+        this.plantPics.push(`../../assets/${randomPic}.jpg`) 
+      }
+     
+    })
   }
-}
+  }
 
