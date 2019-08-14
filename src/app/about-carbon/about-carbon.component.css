@@ -1,8 +1,11 @@
 .lightbulb {
   background:url(../../assets/Lightbulb.jpg);
+  height: 100vw; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  /* background-repeat:repeat-x; */
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  
   }
 
   .c-f-logo {
@@ -25,6 +28,10 @@
     
   }
   
+  .camelImage{
+    animation: fadeIn 3s;
+    
+  }
   
   html, body {
     box-sizing: border-box;
@@ -57,6 +64,6 @@
   }
 
   .col-6 {
-    margin-left: 30px;
-    margin-top: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
   }

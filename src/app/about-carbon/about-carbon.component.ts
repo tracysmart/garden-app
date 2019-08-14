@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutCarbonComponent implements OnInit {
 
+  exposeCamel: boolean =false
+
   constructor() { }
+
+  camelShow(){
+    this.exposeCamel=!this.exposeCamel
+  }
 
   ngOnInit() {
   }

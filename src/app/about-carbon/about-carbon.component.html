@@ -1,9 +1,12 @@
 <div class="lightbulb">
   <div class="container-fluid">
     <div class="row">
-
-      <div class=col-4>
-        <img class="c-f-logo" src="../../assets/c-footprint-logo.png">
+      <div class="col-4">
+        <img
+          class="c-f-logo"
+          (click)="camelShow()"
+          src="../../assets/c-footprint-logo.png"
+        />
       </div>
 
       <div class="col-4 ts">
@@ -17,21 +20,33 @@
 
     <div class="row">
       <div class="col-6 ">
-        <p class="copy">Carbon Footprint was founded in 2009. While riding a camel during a trip to the Indianapolis
-          Zoo, ‘Atom’ Kern took a leap of faith and decided to start developing websites, focusing specifically on
-          plants. He immediately hired 3 master coders/designers.</p>
+        <p class="copy">
+          Carbon Footprint was founded in 2009. While riding a camel during a
+          trip to the Indianapolis Zoo, ‘Atom’ Kern took a leap of faith and
+          decided to start developing websites, focusing specifically on plants.
+          He immediately hired 3 master coders/designers.
+        </p>
 
-        <p class="copy">One could say that we have an even larger Carbon Footprint in 2019 with 15 employees and
-          over 3000 active clients.<br><br></p>
+        <p class="copy">
+          One could say that we have an even larger Carbon Footprint in 2019
+          with 15 employees and over 3000 active clients.<br /><br />
+        </p>
 
         <h3 class="subs">Some of our clients</h3>
         <ul>
-          <li class="copy">LeafMeAlone.com - A tree removal service that helps owners remove trees that produce
-            oxygen so we can have more carbon in the air.</li>
-          <li class="copy">ScissorsCutGrass.com - a lawn mowing company that cuts grass with scissors only.</li>
+          <li class="copy">
+            LeafMeAlone.com - A tree removal service that helps owners remove
+            trees that produce oxygen so we can have more carbon in the air.
+          </li>
+          <li class="copy">
+            ScissorsCutGrass.com - a lawn mowing company that cuts grass with
+            scissors only.
+          </li>
         </ul>
       </div>
+          <div class="col-lg-2 camelImage" *ngIf="exposeCamel">
+            <img src="../../assets/camel.png" alt="" />
+          </div>
     </div>
-
   </div>
 </div>
