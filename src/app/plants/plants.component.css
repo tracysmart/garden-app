@@ -35,8 +35,12 @@ margin: 50px;
   opacity: 1;
 }
 
-.dirt {
+/* .dirt {
   background:url(https://files.slack.com/files-pri/TH7BB59MM-FLXHTDXMY/soil.jpg) repeat;
   padding: 50px;
+} */
 
+.dirt {
+  background:url(../../assets/Soil.jpg) repeat;
+  padding: 50px;
 }

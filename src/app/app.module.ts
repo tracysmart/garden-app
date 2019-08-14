@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutClientComponent } from './about-client/about-client.component';
 import { AboutCarbonComponent } from './about-carbon/about-carbon.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
+import { CarbonNavComponent } from './carbon-nav/carbon-nav.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
     LoginComponent,
     AboutClientComponent,
     AboutCarbonComponent,
-    HeaderNavComponent
+    HeaderNavComponent,
+    CarbonNavComponent
   ],
   imports: [
     BrowserModule,
