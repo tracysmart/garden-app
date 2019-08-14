@@ -45,16 +45,28 @@
 
 }
 
-#orange {
-  color: #ff7700;
+#white {
+  color: white;
 }
 
 .links {
-  font-family: sans-serif;
+  font-family: Oswald, sans-serif;
   font-weight: light;
   font-size: 1.2em;
   color:rgb(8, 70, 3);
+  margin-top: 15px;
+}
 
+.slogan {
+  font-family: Oswald, sans-serif;
+  font-weight: light;
+  font-size: 1.2em;
+  margin-left: 200px;
+  text-align: right;
+
+  color:rgb(8, 70, 3);
+  /* margin-top: 15px; */
+  margin-bottom: -15px;
 }
 
 .container-fluid {
@@ -80,7 +92,7 @@ html, body {
 }
 
 .ts {
-  padding:5px 25px;
+  padding:15px 25px;
   text-align: center;
 }
 

@@ -27,12 +27,49 @@ p {
 .form {
     text-align: center;
     padding-bottom: 50px;
+    width: 200px !important;
 }
 
 input {
-    width: 300px;
+    width: 25rem;
 }
 
 textarea {
-    width: 500px;
+    width: 25rem;
 }
+
+.dirt {
+    background:url(../../assets/Soil.jpg) repeat;
+    padding: 50px;
+  }
+
+.card-title {
+ color: #ff7700;
+ font-family: Oswald;
+ font-size: 1.8em;
+}
+
+.fields {
+width: 25rem;
+margin-bottom: 20px;
+opacity: .7;
+
+}
+
+.container {
+    width: 300px;
+}
+
+.card {
+    margin: 10px;
+}
+
+.white {
+    color: white;
+    font-family: Oswald;
+    font-size: 1.8em;
+    padding: 0px;
+    text-align: left;
+    margin-top: 20px;
+   }
+
