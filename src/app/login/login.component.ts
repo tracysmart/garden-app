@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { FormGroup, FormControl } from "@angular/forms";
 import { UserService } from "../user.service";
 
 @Component({
@@ -18,7 +16,6 @@ export class LoginComponent implements OnInit {
   token: string;
 
   constructor(private userService: UserService) { }
-  // constructor(private http: HttpClient) { }
 
   plants: any;
 
@@ -26,6 +23,12 @@ export class LoginComponent implements OnInit {
     if (sessionStorage.getItem("token")) {
       this.token=sessionStorage.getItem('token');
     }
+
+  }
+
+  logOut(){
+    sessionStorage.clear();
+    this.token=undefined
 
   }
   logIn() {
@@ -36,15 +39,11 @@ export class LoginComponent implements OnInit {
           sessionStorage.setItem("token", data.token);
           this.token=data.token
           console.log(this.token)
-
-          console.log('great'+ data)
         } else {
         console.log(data)
       }},
       err => console.log(err)
     );
   }
-  // getPlants(){
-  //   this.plants = this.http.get(this.api)
-  // }
+
 }

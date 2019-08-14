@@ -1,35 +1,46 @@
-<p>login works!</p>
+<app-header-nav></app-header-nav>
 
 <div class="container">
-  <form (ngSubmit)="logIn(event)">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input
+  <ng-template #elseBlock>
+    <form (ngSubmit)="logIn(event)">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input
         type="email"
         class="form-control"
         placeholder="Enter email"
         name="emails"
         [(ngModel)]="user.userName"
-      />
-    </div>
-
-    <div class="form-group">
-      <input
+        />
+      </div>
+      
+      <div class="form-group">
+        <input
         type="passsword"
         class="form-control"
         placeholder="Enter Password"
         name="password"
         [(ngModel)]="user.password"
-      />
-    </div>
+        />
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </ng-template>
 
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  <div *ngIf="token ;else elseBlock">
+      <div class="row">
+        <div class="col-6" style='padding-top:15px;'>
 
-  <div *ngIf="token">
-    <button (click)="getPlants()">Click Me</button>
-    <div *ngFor="let plant of plants | async">
-      {{ plant | json }}
-    </div>
+          
+          
+          <h5>Login Success</h5>
+          <p>Click the button to proceed to editing your Plant Store</p>
+          
+          <button routerLink='/plants' class="btn btn-success">Start Killing Plants</button><button (click)='logOut()' class="btn btn-danger">Logout</button>
+        </div>
+          
+      </div>
+      
   </div>
 </div>

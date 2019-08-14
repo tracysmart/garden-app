@@ -13,6 +13,7 @@ export class PlantsComponent implements OnInit {
   plants:any = [];
   plantPics = [];
   token: string;
+  test: boolean = true;
 
   constructor(private plantsService:PlantsService, private http: HttpClient) {
   
@@ -26,6 +27,9 @@ export class PlantsComponent implements OnInit {
 
    }
    loadPlants() {
+    // this.test=!this.test
+
+     console.log('line29')
     this.plantsService.getPlantProduct()
     .subscribe((data) => {
       console.log(data)
@@ -37,9 +41,11 @@ export class PlantsComponent implements OnInit {
      
     })
   }
-  killPlant(id) {
+  killPlant(id, index) {
    this.plantsService.killPlantService(id).subscribe((data:any)=>{
+    //  this.test=!this.test
      this.loadPlants()
+    // this.plants.splice(index, 1); 
      console.log(data)
    }, err => console.log(err))
   }}

@@ -14,6 +14,11 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
+  logOut(){
+    sessionStorage.clear();
+
+  }
+
   userLogin(user) {
     const body = {
       email: user.userName,
@@ -23,6 +28,5 @@ export class UserService {
     const reqHeaders = new HttpHeaders({ "Content-Type": "application/json" });
 
     return this.http.post(this.api, body, { headers: reqHeaders });
-    // return this.http.post(this.api, body)
   }
 }
