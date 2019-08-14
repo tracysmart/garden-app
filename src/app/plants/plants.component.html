@@ -9,10 +9,10 @@
         <div class="card-body">
           <h5 class="card-title">{{plant.product_name}}</h5>
           <p class="card-text">{{plant.product_description}}</p>
-          <!-- <div *ngIf="token"> -->
+          <div *ngIf="token">
             <button (click)="killPlant(plant.id)" class="btn btn-primary">Kill Plant</button>
           
-          <!-- </div> -->
+          </div>
         </div>
         <div class="card-footer text-muted">
           $ {{plant.product_price}}

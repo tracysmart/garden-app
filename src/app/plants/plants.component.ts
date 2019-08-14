@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import { PLANTS } from '../mock-plants';
 import { PlantsService } from '../plants.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -33,14 +32,13 @@ export class PlantsComponent implements OnInit {
       for(let i=0; i < this.plants.length; i++){
         let randomPic = Math.floor(Math.random() * 13) +1;
         this.plantPics.push(`../../assets/${randomPic}.jpg`) 
-      }
-     
+      } 
     })
   }
   killPlant(id) {
-   this.plantsService.killPlantService(id).subscribe((data:any)) => {
+   this.plantsService.killPlantService(id).subscribe((data:any) => {
      this.loadPlants();
-   }, err => console.log(err);
+   }, err => console.log(err));
     console.log(id);
   }
   }
