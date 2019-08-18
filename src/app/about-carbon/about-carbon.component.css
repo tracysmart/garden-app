@@ -1,6 +1,11 @@
 .lightbulb {
+  height: 1200px;
+  /* Center and scale the image nicely */
+  /* background-repeat:repeat-x; */
+  }
+.lightbulb2 {
   background:url(../../assets/Lightbulb.jpg);
-  height: 100vw; 
+  height: 100%; 
   /* Center and scale the image nicely */
   background-position: center;
   /* background-repeat:repeat-x; */

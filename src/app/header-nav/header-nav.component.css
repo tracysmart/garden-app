@@ -32,13 +32,7 @@
 
 }
 
-.pageCtr {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    background-color: white;
-}
+
 
 .dirt {
   background:url(https://files.slack.com/files-pri/TH7BB59MM-FLXHTDXMY/soil.jpg) repeat;
@@ -61,30 +55,15 @@
   font-family: Oswald, sans-serif;
   font-weight: light;
   font-size: 1.2em;
-  margin-left: 200px;
-  text-align: right;
 
   color:rgb(8, 70, 3);
   /* margin-top: 15px; */
   margin-bottom: -15px;
 }
 
-.container-fluid {
-  display: flex;
-  background-color: white;  
-  flex-direction: row;
-  justify-content: center;
 
-}
 
-.bar {
-  background-color: #ff7700;
-  width: 100vw;
-  margin:10;
-  height: 100%;
-  display: flex;
-  justify-content: left;
-}
+
 
 html, body {
   box-sizing: border-box;
@@ -97,5 +76,5 @@ html, body {
 }
 
 .pf-logo {
-  margin: 0px -10px;
+  max-width: 100%;
 }
